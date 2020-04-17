@@ -10,13 +10,14 @@ shallow_clone: true
 
 platform:
     - x64
-    - x86
+#    - x86
 
 configuration:
     - Debug
     - Release
 
 environment:
+#	APPVEYOR_BUILD_WORKER_CLOUD: gce
     BUILD_PROJECT: llvm
     BUILD_MASTER: false
     LLVM_VERSION: 9.0.1

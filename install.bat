@@ -4,22 +4,24 @@
 
 :: delete unnecessary big directories
 
-::	set DEL_DIR_LIST= ^
-::		"c:\cygwin" ^
-::		"c:\cygwin64" ^
-::		"c:\winddk" ^
-::		"c:\mingw" ^
-::		"c:\mingw-64" ^
-::		"c:\qt" ^
-::		"c:\libraries" ^
-::		"c:\Program Files\LLVM"
-::
-::	for %%f in (%DEL_DIR_LIST%) do (
-::		if exist %%f (
-::			echo Deleting: %%f
-::			rd /S /Q %%f
-::		)
-::	)
+set DEL_DIR_LIST= ^
+	"c:\cygwin" ^
+	"c:\cygwin64" ^
+	"c:\winddk" ^
+	"c:\mingw" ^
+	"c:\mingw-64" ^
+	"c:\qt" ^
+	"c:\libraries" ^
+	"c:\Program Files\LLVM"
+
+for %%f in (%DEL_DIR_LIST%) do (
+	if exist %%f (
+		echo Deleting: %%f
+		rd /S /Q %%f
+	)
+)
+
+dir C:\
 
 :: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
